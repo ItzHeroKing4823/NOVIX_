@@ -8,22 +8,119 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/x-icon" href="./img/LOGO NOVIX.png">
-        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
     <style>
-
+        .modal-content{
+            border-radius: 18px;
+            overflow: hidden;
+        }
+    
+        .nav-pills .nav-link{
+            border-radius: 8px;
+            padding: 8px 22px;
+            transition: 0.3s;
+            color: white !important;
+        }
+    
+        .nav-pills .nav-link.active{
+            background-color: #39bfa7;
+            color: white !important;
+        }
+    
+        .form-control{
+            height: 48px;
+            border-radius: 8px;
+            background-color: #0d2a66;
+            border: 1px solid #274b8d;
+            color: white;
+        }
+    
+        .form-control::placeholder{
+            color: rgba(255,255,255,0.5);
+        }
+    
+        .form-control:focus{
+            background-color: #0d2a66;
+            border-color: #39bfa7;
+            box-shadow: none;
+            color: white;
+        }
+    
+        .form-label{
+            color: white;
+            font-weight: 500;
+        }
+    
+        .social-btn{
+            width: 100%;
+            height: 48px;
+            border: none;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            transition: 0.3s;
+        }
+    
+        .facebook-btn{
+            background: #4267B2;
+            color: white;
+        }
+    
+        .facebook-btn:hover{
+            background: #365899;
+        }
+    
+        .google-btn{
+            background: white;
+            color: #555;
+        }
+    
+        .google-btn img{
+            width: 18px;
+        }
+    
+        .divider{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+            margin: 20px 0;
+        }
+    
+        .divider::before,
+        .divider::after{
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+    
+        .divider::before{
+            margin-right: 10px;
+        }
+    
+        .divider::after{
+            margin-left: 10px;
+        }
+    
+        .password-box{
+            position: relative;
+        }
+    
+        .password-box i{
+            position: absolute;
+            right: 15px;
+            top: 16px;
+            color: rgba(255,255,255,0.5);
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-            <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-<script>
-    AOS.init({
-        duration: 1000,
-        once: true
-    });
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <nav class="navbar navbar-expand-lg my-nav-bg">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -58,295 +155,177 @@
             </div>
         </div>
     </nav>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-
-<style>
-    .modal-content{
-        border-radius: 18px;
-        overflow: hidden;
-    }
-
-    .nav-pills .nav-link{
-        border-radius: 8px;
-        padding: 8px 22px;
-        transition: 0.3s;
-        color: white !important;
-    }
-
-    .nav-pills .nav-link.active{
-        background-color: #39bfa7;
-        color: white !important;
-    }
-
-    .form-control{
-        height: 48px;
-        border-radius: 8px;
-        background-color: #0d2a66;
-        border: 1px solid #274b8d;
-        color: white;
-    }
-
-    .form-control::placeholder{
-        color: rgba(255,255,255,0.5);
-    }
-
-    .form-control:focus{
-        background-color: #0d2a66;
-        border-color: #39bfa7;
-        box-shadow: none;
-        color: white;
-    }
-
-    .form-label{
-        color: white;
-        font-weight: 500;
-    }
-
-    .social-btn{
-        width: 100%;
-        height: 48px;
-        border: none;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        font-weight: 600;
-        margin-bottom: 12px;
-        transition: 0.3s;
-    }
-
-    .facebook-btn{
-        background: #4267B2;
-        color: white;
-    }
-
-    .facebook-btn:hover{
-        background: #365899;
-    }
-
-    .google-btn{
-        background: white;
-        color: #555;
-    }
-
-    .google-btn img{
-        width: 18px;
-    }
-
-    .divider{
-        display: flex;
-        align-items: center;
-        text-align: center;
-        color: rgba(255,255,255,0.5);
-        margin: 20px 0;
-    }
-
-    .divider::before,
-    .divider::after{
-        content: '';
-        flex: 1;
-        border-bottom: 1px solid rgba(255,255,255,0.2);
-    }
-
-    .divider::before{
-        margin-right: 10px;
-    }
-
-    .divider::after{
-        margin-left: 10px;
-    }
-
-    .password-box{
-        position: relative;
-    }
-
-    .password-box i{
-        position: absolute;
-        right: 15px;
-        top: 16px;
-        color: rgba(255,255,255,0.5);
-        cursor: pointer;
-    }
-</style>
-
-
-
-<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-
-        <div class="modal-content text-white p-3" style="background-color: #051b4d;">
-
-     
-            <div class="modal-header border-0">
-
-                <ul class="nav nav-pills" id="authTab" role="tablist">
-
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="login-tab"
-                            data-bs-toggle="tab"
-                            data-bs-target="#login-panel"
-                            type="button"
-                            role="tab">
-                            Login
-                        </button>
-                    </li>
-
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link"
-                            id="register-tab"
-                            data-bs-toggle="tab"
-                            data-bs-target="#register-panel"
-                            type="button"
-                            role="tab">
-                            Signup
-                        </button>
-                    </li>
-
-                </ul>
-
-                <button type="button" class="btn-close btn-close-white"
-                    data-bs-dismiss="modal"></button>
-
-            </div>
-
-           
-            <div class="modal-body">
-
-                <div class="tab-content">
-
-              
-                    <div class="tab-pane fade show active" id="login-panel">
-
-                        <h3 class="fw-bold mb-4" style="color:#39bfa7;">
-                            Welcome Back
-                        </h3>
-
-                        <form>
-
-                            <div class="mb-3">
-                                <label class="form-label">Email</label>
-                                <input type="email" class="form-control" placeholder="Enter your email">
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Password</label>
-
-                                <div class="password-box">
-                                    <input type="password" class="form-control" placeholder="Enter password">
-                                    <i class="fa-regular fa-eye-slash"></i>
-                                </div>
-                            </div>
-
-                            <div class="d-flex justify-content-between align-items-center mb-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label small text-white-50">
-                                        Remember me
-                                    </label>
-                                </div>
-
-                                <a href="#" class="small text-white-50 text-decoration-none">
-                                    Forgot Password?
-                                </a>
-                            </div>
-
-                            <button class="btn w-100 fw-bold text-white"
-                                style="background:#39bfa7; height:48px;">
+    
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+    
+            <div class="modal-content text-white p-3" style="background-color: #051b4d;">
+         
+                <div class="modal-header border-0">
+    
+                    <ul class="nav nav-pills" id="authTab" role="tablist">
+    
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="login-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#login-panel"
+                                type="button"
+                                role="tab">
                                 Login
                             </button>
-
-                            <div class="divider">Or</div>
-
-               
-                            <button type="button" class="social-btn facebook-btn">
-                                <i class="fa-brands fa-facebook-f"></i>
-                                Login with Facebook
-                            </button>
-
-                      
-                            <button type="button" class="social-btn google-btn">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png">
-                                Login with Google
-                            </button>
-
-                        </form>
-
-                    </div>
-
-                
-                    <div class="tab-pane fade" id="register-panel">
-
-                        <h3 class="fw-bold mb-4" style="color:#39bfa7;">
-                            Create Account
-                        </h3>
-
-                        <form>
-
-                            <div class="mb-3">
-                                <label class="form-label">Full Name</label>
-                                <input type="text" class="form-control" placeholder="John Doe">
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Email</label>
-                                <input type="email" class="form-control" placeholder="Enter your email">
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Password</label>
-
-                                <div class="password-box">
-                                    <input type="password" class="form-control" placeholder="Create password">
-                                    <i class="fa-regular fa-eye-slash"></i>
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label">Confirm Password</label>
-
-                                <div class="password-box">
-                                    <input type="password" class="form-control" placeholder="Confirm password">
-                                    <i class="fa-regular fa-eye-slash"></i>
-                                </div>
-                            </div>
-
-                            <div class="form-check mb-4">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label small text-white-50">
-                                    I agree to Terms & Conditions
-                                </label>
-                            </div>
-
-                            <button class="btn w-100 fw-bold text-white"
-                                style="background:#39bfa7; height:48px;">
+                        </li>
+    
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link"
+                                id="register-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#register-panel"
+                                type="button"
+                                role="tab">
                                 Signup
                             </button>
-
-                            <div class="divider">Or</div>
-
-                            <button type="button" class="social-btn facebook-btn">
-                                <i class="fa-brands fa-facebook-f"></i>
-                                Signup with Facebook
-                            </button>
-
-                            <button type="button" class="social-btn google-btn">
-                                <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png">
-                                Signup with Google
-                            </button>
-
-                        </form>
-
-                    </div>
-
+                        </li>
+    
+                    </ul>
+    
+                    <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+    
                 </div>
-
+               
+                <div class="modal-body">
+    
+                    <div class="tab-content">
+    
+                  
+                        <div class="tab-pane fade show active" id="login-panel">
+    
+                            <h3 class="fw-bold mb-4" style="color:#39bfa7;">
+                                Welcome Back
+                            </h3>
+    
+                            <form>
+    
+                                <div class="mb-3">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" placeholder="Enter your email">
+                                </div>
+    
+                                <div class="mb-3">
+                                    <label class="form-label">Password</label>
+    
+                                    <div class="password-box">
+                                        <input type="password" class="form-control" placeholder="Enter password">
+                                        <i class="fa-regular fa-eye-slash"></i>
+                                    </div>
+                                </div>
+    
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label small text-white-50">
+                                            Remember me
+                                        </label>
+                                    </div>
+    
+                                    <a href="#" class="small text-white-50 text-decoration-none">
+                                        Forgot Password?
+                                    </a>
+                                </div>
+    
+                                <button class="btn w-100 fw-bold text-white"
+                                    style="background:#39bfa7; height:48px;">
+                                    Login
+                                </button>
+    
+                                <div class="divider">Or</div>
+    
+                                <button type="button" class="social-btn facebook-btn">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                    Login with Facebook
+                                </button>
+                          
+                                <button type="button" class="social-btn google-btn">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png">
+                                    Login with Google
+                                </button>
+    
+                            </form>
+    
+                        </div>
+    
+                    
+                        <div class="tab-pane fade" id="register-panel">
+    
+                            <h3 class="fw-bold mb-4" style="color:#39bfa7;">
+                                Create Account
+                            </h3>
+    
+                            <form>
+    
+                                <div class="mb-3">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" placeholder="John Doe">
+                                </div>
+    
+                                <div class="mb-3">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" placeholder="Enter your email">
+                                </div>
+    
+                                <div class="mb-3">
+                                    <label class="form-label">Password</label>
+    
+                                    <div class="password-box">
+                                        <input type="password" class="form-control" placeholder="Create password">
+                                        <i class="fa-regular fa-eye-slash"></i>
+                                    </div>
+                                </div>
+    
+                                <div class="mb-3">
+                                    <label class="form-label">Confirm Password</label>
+    
+                                    <div class="password-box">
+                                        <input type="password" class="form-control" placeholder="Confirm password">
+                                        <i class="fa-regular fa-eye-slash"></i>
+                                    </div>
+                                </div>
+    
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label small text-white-50">
+                                        I agree to Terms & Conditions
+                                    </label>
+                                </div>
+    
+                                <button class="btn w-100 fw-bold text-white"
+                                    style="background:#39bfa7; height:48px;">
+                                    Signup
+                                </button>
+    
+                                <div class="divider">Or</div>
+    
+                                <button type="button" class="social-btn facebook-btn">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                    Signup with Facebook
+                                </button>
+    
+                                <button type="button" class="social-btn google-btn">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png">
+                                    Signup with Google
+                                </button>
+    
+                            </form>
+    
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
             </div>
-
         </div>
     </div>
-</div>
 
 
     <main>
@@ -517,7 +496,7 @@
         </section>
     </main>
 
-<footer class="footer-top">
+    <footer class="footer-top">
         <div class="container">
             <div class="row">
                 
@@ -635,5 +614,12 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 </body>
 </html>
