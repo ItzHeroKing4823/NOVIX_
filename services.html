@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./img/LOGO NOVIX.png">
+    <style>
+        .nav-pills .nav-link-card {
+            background: none;
+            border: 1px solid transparent;
+            color: inherit;
+            text-align: center;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        .nav-pills .nav-link-card.active {
+            background-color: #f8f9fa !important;
+            border-color: #132A53 !important;
+            color: #132A53 !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg my-nav-bg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./img/1.png" alt="Novix Logo" style="max-height: 40px; width: auto;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link home-btn" href="./services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./solution.html">Solutions</a>
+                    </li>
+                    
+                    <li class="nav-item w-100 d-flex justify-content-center m-0">
+                        <a href="#" class="profile-icon-box mx-0 mt-2" data-bs-toggle="modal" data-bs-target="#authModal">
+                            <i class="bi bi-person-circle"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+    .modal-content{
+        border-radius: 18px;
+        overflow: hidden;
+    }
+
+    .nav-pills .nav-link{
+        border-radius: 8px;
+        padding: 8px 22px;
+        transition: 0.3s;
+        color: white !important;
+    }
+
+    .nav-pills .nav-link.active{
+        background-color: #39bfa7;
+        color: white !important;
+    }
+
+    .form-control{
+        height: 48px;
+        border-radius: 8px;
+        background-color: #0d2a66;
+        border: 1px solid #274b8d;
+        color: white;
+    }
+
+    .form-control::placeholder{
+        color: rgba(255,255,255,0.5);
+    }
+
+    .form-control:focus{
+        background-color: #0d2a66;
+        border-color: #39bfa7;
+        box-shadow: none;
+        color: white;
+    }
+
+    .form-label{
+        color: white;
+        font-weight: 500;
+    }
+
+    .social-btn{
+        width: 100%;
+        height: 48px;
+        border: none;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        transition: 0.3s;
+    }
+
+    .facebook-btn{
+        background: #4267B2;
+        color: white;
+    }
+
+    .facebook-btn:hover{
+        background: #365899;
+    }
+
+    .google-btn{
+        background: white;
+        color: #555;
+    }
+
+    .google-btn img{
+        width: 18px;
+    }
+
+    .divider{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: rgba(255,255,255,0.5);
+        margin: 20px 0;
+    }
+
+    .divider::before,
+    .divider::after{
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .divider::before{
+        margin-right: 10px;
+    }
+
+    .divider::after{
+        margin-left: 10px;
+    }
+
+    .password-box{
+        position: relative;
+    }
+
+    .password-box i{
+        position: absolute;
+        right: 15px;
+        top: 16px;
+        color: rgba(255,255,255,0.5);
+        cursor: pointer;
+    }
+</style>
+
+
+<!-- MODAL -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content text-white p-3" style="background-color: #051b4d;">
+
+            <!-- HEADER -->
+            <div class="modal-header border-0">
+
+                <ul class="nav nav-pills" id="authTab" role="tablist">
+
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="login-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#login-panel"
+                            type="button"
+                            role="tab">
+                            Login
+                        </button>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link"
+                            id="register-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#register-panel"
+                            type="button"
+                            role="tab">
+                            Signup
+                        </button>
+                    </li>
+
+                </ul>
+
+                <button type="button" class="btn-close btn-close-white"
+                    data-bs-dismiss="modal"></button>
+
+            </div>
+
+            <!-- BODY -->
+            <div class="modal-body">
+
+                <div class="tab-content">
+
+                    <!-- LOGIN -->
+                    <div class="tab-pane fade show active" id="login-panel">
+
+                        <h3 class="fw-bold mb-4" style="color:#39bfa7;">
+                            Welcome Back
+                        </h3>
+
+                        <form>
+
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Password</label>
+
+                                <div class="password-box">
+                                    <input type="password" class="form-control" placeholder="Enter password">
+                                    <i class="fa-regular fa-eye-slash"></i>
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label small text-white-50">
+                                        Remember me
+                                    </label>
+                                </div>
+
+                                <a href="#" class="small text-white-50 text-decoration-none">
+                                    Forgot Password?
+                                </a>
+                            </div>
+
+                            <button class="btn w-100 fw-bold text-white"
+                                style="background:#39bfa7; height:48px;">
+                                Login
+                            </button>
+
+                            <div class="divider">Or</div>
+
+                            <!-- FACEBOOK -->
+                            <button type="button" class="social-btn facebook-btn">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                Login with Facebook
+                            </button>
+
+                            <!-- GOOGLE -->
+                            <button type="button" class="social-btn google-btn">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png">
+                                Login with Google
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                    <!-- REGISTER -->
+                    <div class="tab-pane fade" id="register-panel">
+
+                        <h3 class="fw-bold mb-4" style="color:#39bfa7;">
+                            Create Account
+                        </h3>
+
+                        <form>
+
+                            <div class="mb-3">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" placeholder="John Doe">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Password</label>
+
+                                <div class="password-box">
+                                    <input type="password" class="form-control" placeholder="Create password">
+                                    <i class="fa-regular fa-eye-slash"></i>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Confirm Password</label>
+
+                                <div class="password-box">
+                                    <input type="password" class="form-control" placeholder="Confirm password">
+                                    <i class="fa-regular fa-eye-slash"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label small text-white-50">
+                                    I agree to Terms & Conditions
+                                </label>
+                            </div>
+
+                            <button class="btn w-100 fw-bold text-white"
+                                style="background:#39bfa7; height:48px;">
+                                Signup
+                            </button>
+
+                            <div class="divider">Or</div>
+
+                            <!-- FACEBOOK -->
+                            <button type="button" class="social-btn facebook-btn">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                Signup with Facebook
+                            </button>
+
+                            <!-- GOOGLE -->
+                            <button type="button" class="social-btn google-btn">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png">
+                                Signup with Google
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+    <main>
+        <section class="py-5 bg-white">
+            <div class="container text-center">
+                
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8">
+                        <h6 class="text-uppercase text-info fw-bold tracking-wider small mb-2">What We Do</h6>
+                        <h2 class="fw-bold text-dark mb-3" style="color: #0B2545;">Reducing Electronic Waste for a Cleaner Future</h2>
+                        <p class="text-muted mx-auto" style="max-width: 600px; font-size: 0.95rem; line-height: 1.8;">
+                            Teaching communities how to responsibly recycle old tech, extend device lifespans, and protect our environment from toxic waste.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- TAB TRIGGERS (The Service Headings) -->
+                <div class="row g-4 justify-content-center mt-4 nav nav-pills border-0" id="servicesTab" role="tablist">
+                    
+                    <!-- Service 1 Trigger -->
+                    <div class="col-md-4 px-4" role="presentation">
+                        <button class="nav-link nav-link-card active p-3" id="collection-tab" data-bs-toggle="tab" data-bs-target="#collection-panel" type="button" role="tab" aria-controls="collection-panel" aria-selected="true">
+                            <div class="d-flex justify-content-center mb-4">
+                                <div class="text-white d-flex align-items-center justify-content-center" style="background-color: #132A53; width: 80px; height: 80px; border-radius: 4px;">
+                                    <i class="bi bi-box-seam fs-2"></i>
+                                </div>
+                            </div>
+                            <h4 class="fw-bold mb-3" style="color: #132A53; font-size: 1.25rem;">Collection & Sorting</h4>
+                            <p class="text-muted small px-3">Collect unused electronic devices and sort recyclable materials safely.</p>
+                        </button>
+                    </div>
+
+                    <!-- Service 2 Trigger -->
+                    <div class="col-md-4 px-4" role="presentation">
+                        <button class="nav-link nav-link-card p-3" id="dismantling-tab" data-bs-toggle="tab" data-bs-target="#dismantling-panel" type="button" role="tab" aria-controls="dismantling-panel" aria-selected="false">
+                            <div class="d-flex justify-content-center mb-4">
+                                <div class="text-white d-flex align-items-center justify-content-center" style="background-color: #132A53; width: 80px; height: 80px; border-radius: 4px;">
+                                    <i class="bi bi-tools fs-2"></i>
+                                </div>
+                            </div>
+                            <h4 class="fw-bold mb-3" style="color: #132A53; font-size: 1.25rem;">Manual Dismantling</h4>
+                            <p class="text-muted small px-3">Separate reusable electronic parts to reduce harmful waste and pollution.</p>
+                        </button>
+                    </div>
+
+                    <!-- Service 3 Trigger -->
+                    <div class="col-md-4 px-4" role="presentation">
+                        <button class="nav-link nav-link-card p-3" id="shredding-tab" data-bs-toggle="tab" data-bs-target="#shredding-panel" type="button" role="tab" aria-controls="shredding-panel" aria-selected="false">
+                            <div class="d-flex justify-content-center mb-4">
+                                <div class="text-white d-flex align-items-center justify-content-center" style="background-color: #132A53; width: 80px; height: 80px; border-radius: 4px;">
+                                    <i class="bi bi-recycle fs-2"></i>
+                                </div>
+                            </div>
+                            <h4 class="fw-bold mb-3" style="color: #132A53; font-size: 1.25rem;">Shredding & Recovery</h4>
+                            <p class="text-muted small px-3">Recover valuable materials from old electronics for reuse and sustainability.</p>
+                        </button>
+                    </div>
+
+                </div>
+
+                <hr class="my-5 opacity-25">
+
+                <!-- TAB PANELS -->
+                <div class="tab-content text-start mt-4" id="servicesTabContent">
+                    
+                    <!-- PANEL: COLLECTION & SORTING (Service 1) -->
+                    <div class="tab-pane fade show active" id="collection-panel" role="tabpanel" aria-labelledby="collection-tab">
+                        
+                        <!-- Section 1: Overview & Top Accordion -->
+                        <section class="py-5 bg-white rounded-4 my-4">
+                            <div class="container px-4 px-md-5">
+                                <div class="row align-items-center g-5">
+                                    <div class="col-lg-7">
+                                        <h2 class="fw-bold mb-4 fs-3" style="color: #132A53;">See What We Have To Offer</h2>
+                                        <p class="text-secondary mb-5 lh-lg" style="font-size: 0.95rem; max-width: 600px;">
+                                            E-waste is growing at an alarming rate because many people don't know how 
+                                            smartphones affect our planet. Old phones are thrown into the trash, releasing 
+                                            harmful materials into the environment instead of being recycled safely.
+                                        </p>
+                                    
+                                        <div class="col-lg-12">
+                                            <div class="row row-cols-1 row-cols-md-2 g-4 accordion custom-accordion" id="ewasteAccordionTop">
+                                                
+                                                <div class="col">
+                                                    <div class="accordion-item bg-transparent border-0 h-100">
+                                                        <h3 class="accordion-header">
+                                                            <button class="mt-3 accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0 bg-transparent text-dark fw-bold" 
+                                                                    type="button" data-bs-toggle="collapse" data-bs-target="#topCollapseOne" aria-expanded="false" aria-controls="topCollapseOne">
+                                                                <span>Valuable Materials Recyclable</span>
+                                                            </button>
+                                                        </h3>
+                                                        <div id="topCollapseOne" class="accordion-collapse collapse" data-bs-parent="#ewasteAccordionTop">
+                                                            <div class="accordion-body px-4 py-2 bg-transparent small text-muted">
+                                                                Smartphones are packed with precious, high-grade metals like gold, silver, and palladium. Instead of letting these finite resources go to waste in landfills like Htein Pin, our service ensures 100% of these rare materials are safely extracted and fed back into Myanmar's local tech-refurbishing cycle.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="accordion-item bg-transparent border-0 h-100">
+                                                        <h3 class="accordion-header">
+                                                            <button class="mt-3 accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0 bg-transparent text-dark fw-bold" 
+                                                                    type="button" data-bs-toggle="collapse" data-bs-target="#topCollapseTwo" aria-expanded="false" aria-controls="topCollapseTwo">
+                                                                <span>Of Old Phones Left at Home</span>
+                                                            </button>
+                                                        </h3>
+                                                        <div id="topCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#ewasteAccordionTop">
+                                                            <div class="accordion-body px-4 py-2 bg-transparent small text-muted">
+                                                                So many outdated mobile phones sit forgotten in drawers across Yangon households because people don't know how to dispose of them. Our service provides a convenient collection point so these idle devices don't end up mixed with regular household trash collected by the YCDC.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="accordion-item bg-transparent border-0 h-100">
+                                                        <h3 class="accordion-header">
+                                                            <button class="mt-3 accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0 bg-transparent text-dark fw-bold" 
+                                                                    type="button" data-bs-toggle="collapse" data-bs-target="#topCollapseThree" aria-expanded="false" aria-controls="topCollapseThree">
+                                                                <span>Carbon From Manufacturing</span>
+                                                            </button>
+                                                        </h3>
+                                                        <div id="topCollapseThree" class="accordion-collapse collapse" data-bs-parent="#ewasteAccordionTop">
+                                                            <div class="accordion-body px-4 py-2 bg-transparent small text-muted">
+                                                                Up to 80% of a smartphone's lifetime carbon footprint happens during factory production and raw mineral mining. By recycling your old device with us, you help reduce the global demand for new mining—directly easing the environmental strain on mineral-rich areas near our borders.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="accordion-item bg-transparent border-0 h-100">
+                                                        <h3 class="accordion-header">
+                                                            <button class="mt-3 accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0 bg-transparent text-dark fw-bold" 
+                                                                    type="button" data-bs-toggle="collapse" data-bs-target="#topCollapseFour" aria-expanded="false" aria-controls="topCollapseFour">
+                                                                <span>Less Damage From Recycling</span>
+                                                            </button>
+                                                        </h3>
+                                                        <div id="topCollapseFour" class="accordion-collapse collapse" data-bs-parent="#ewasteAccordionTop">
+                                                            <div class="accordion-body px-4 py-2 bg-transparent small text-muted">
+                                                                When phones are thrown into standard trash bins, toxic heavy metals like lead and mercury leak into the surrounding soil and water tables. Our professional recycling service completely eliminates open-burning risks and landfill pollution, actively protecting the urban environment and community health across Yangon.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-5 text-center text-lg-end">
+                                        <img src="./img/service1/E-waste.png" alt="E-waste bin full of electronic components" class="img-fluid" style="max-height: 400px; width: auto;">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 2: Static Carousel Banner (No arrows) -->
+                        <section id="ewasteHeroCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="position-relative w-100 d-flex align-items-center justify-content-center text-center text-white p-4" 
+                                        style="background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./img/service1/bg.png') no-repeat center center; background-size: cover; min-height: 400px;">
+                                        <div class="container" style="max-width: 800px;">
+                                            <p class="text-uppercase fw-semibold mb-2" style="letter-spacing: 3px; font-size: 0.9rem;">Novix</p>
+                                            <h1 class="display-4 fw-bold mb-4 text-uppercase" style="letter-spacing: 1px;">The Crisis of E-Waste</h1>
+                                            <p class="lead fs-5 opacity-75 mx-auto" style="max-width: 650px; line-height: 1.6;">
+                                                Millions of old smartphones are thrown away each year, piling up in landfills and releasing toxic chemicals into our environment.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 3: Process Roadmap -->
+                        <section class="py-5 bg-white">
+                            <div class="container text-center py-4">
+                                <p class="text-uppercase small fw-semibold tracking-wider" style="color: #7b8fcb; letter-spacing: 1px;">Our Platform Roadmap</p>
+                                <h2 class="display-6 fw-bold mb-5" style="color: #5c6fa9;">How It Works?<br>Step By Step</h2>
+                                
+                                <div class="row g-4 justify-content-center position-relative mt-5">
+                                    <div class="col-md-4 px-4 position-relative step-col">
+                                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4 border border-dashed text-primary fw-bold fs-2" 
+                                            style="width: 100px; height: 100px; border-style: dashed !important; border-color: #abb9e3 !important; color: #2b55b6 !important;">
+                                            1.
+                                        </div>
+                                        <h4 class="fw-bold mb-3" style="color: #5c6fa9; font-size: 1.25rem;">Track Your Impact</h4>
+                                        <p class="text-secondary small px-lg-3" style="line-height: 1.6;">
+                                            Use our interactive calculator to see the carbon footprint and environmental cost of your current smartphone habits.
+                                        </p>
+                                    </div>
+
+                                    <div class="col-md-4 px-4 position-relative step-col">
+                                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4 border border-dashed text-primary fw-bold fs-2" 
+                                            style="width: 100px; height: 100px; border-style: dashed !important; border-color: #abb9e3 !important; color: #2b55b6 !important;">
+                                            2.
+                                        </div>
+                                        <h4 class="fw-bold mb-3" style="color: #5c6fa9; font-size: 1.25rem;">Discover Eco-Habits</h4>
+                                        <p class="text-secondary small px-lg-3" style="line-height: 1.6;">
+                                            Learn simple ways to extend your phone's life, find local repair guides, and understand the cycle of electronics.
+                                        </p>
+                                    </div>
+
+                                    <div class="col-md-4 px-4 position-relative">
+                                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4 border border-dashed text-primary fw-bold fs-2" 
+                                            style="width: 100px; height: 100px; border-style: dashed !important; border-color: #abb9e3 !important; color: #2b55b6 !important;">
+                                            3.
+                                        </div>
+                                        <h4 class="fw-bold mb-3" style="color: #5c6fa9; font-size: 1.25rem;">Recycle & Reward</h4>
+                                        <p class="text-secondary small px-lg-3" style="line-height: 1.6;">
+                                            Locate the nearest certified e-waste recycling center to safely drop off your old devices and earn green rewards.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 4: Cost of Burning Tech & Bottom Accordion -->
+                        <section class="position-relative overflow-hidden py-5 text-white rounded-4" 
+                                 style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./img/service1/bg2.png') no-repeat center center; background-size: cover; min-height: 400px;">
+                            <div class="container py-4">
+                                <div class="row g-5 align-items-center">
+                                    <div class="col-lg-5">
+                                        <h2 class="display-6 fw-bold mb-3 border-bottom border-secondary border-3 pb-3 d-inline-block text-capitalize" style="border-color: #7b8fcb !important;">
+                                            The Cost of Burning Tech
+                                        </h2>
+                                        <p class="fs-5 opacity-75 mt-3" style="max-width: 450px; line-height: 1.6;">
+                                            When smartphones end up in landfills or open burn pits, they don't just sit there—they poison our surroundings.
+                                        </p>
+                                    </div>
+
+                                    <div class="col-lg-7">
+                                        <div class="accordion custom-accordion" id="ewasteAccordionBottom">
+                                            
+                                            <div class="accordion-item bg-transparent border-0 mb-3">
+                                                <h3 class="accordion-header">
+                                                    <button class="accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0" 
+                                                            type="button" data-bs-toggle="collapse" data-bs-target="#bottomCollapseOne" aria-expanded="false" aria-controls="bottomCollapseOne">
+                                                        <span>What happens when phones are thrown in the trash?</span>
+                                                    </button>
+                                                </h3>
+                                                <div id="bottomCollapseOne" class="accordion-collapse collapse" data-bs-parent="#ewasteAccordionBottom">
+                                                    <div class="accordion-body px-4 py-3 bg-dark-subtle text-black-50 small">
+                                                        Smartphones contain toxic heavy metals like lead, mercury, and cadmium. When buried or burned, these hazardous materials leak into local soil and water systems, harming agriculture and wildlife.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item bg-transparent border-0 mb-3">
+                                                <h3 class="accordion-header">
+                                                    <button class="accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0" 
+                                                            type="button" data-bs-toggle="collapse" data-bs-target="#bottomCollapseTwo" aria-expanded="false" aria-controls="bottomCollapseTwo">
+                                                        <span>How does e-waste burning impact human health?</span>
+                                                    </button>
+                                                </h3>
+                                                <div id="bottomCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#ewasteAccordionBottom">
+                                                    <div class="accordion-body px-4 py-3 bg-dark-subtle text-black-50 small">
+                                                        Burning electronic components releases highly dangerous chemicals into the air. Breathing these toxic fumes causes severe respiratory illnesses and long-term health damage for communities living nearby.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item bg-transparent border-0 mb-3">
+                                                <h3 class="accordion-header">
+                                                    <button class="accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0" 
+                                                            type="button" data-bs-toggle="collapse" data-bs-target="#bottomCollapseThree" aria-expanded="false" aria-controls="bottomCollapseThree">
+                                                        <span>How can we stop this cycle together?</span>
+                                                    </button>
+                                                </h3>
+                                                <div id="bottomCollapseThree" class="accordion-collapse collapse" data-bs-parent="#ewasteAccordionBottom">
+                                                    <div class="accordion-body px-4 py-3 bg-dark-subtle text-black-50 small">
+                                                        By keeping your phone longer, repairing minor damage instead of replacing it, and using our digital platform to find certified recycling centers that extract materials safely.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- PANEL: MANUAL DISMANTLING (Service 2) -->
+                    <div class="tab-pane fade" id="dismantling-panel" role="tabpanel" aria-labelledby="dismantling-tab">
+                        
+                        <!-- Section 1: Overview & Metrics Accordion -->
+                        <section class="py-5 bg-white rounded-4 my-4">
+                            <div class="container px-4 px-md-5">
+                                <div class="row align-items-center g-5">
+                                    <div class="col-lg-7">
+                                        <h2 class="fw-bold mb-4 fs-3" style="color: #132A53;">See What We Have To Offer</h2>
+                                        <p class="text-secondary mb-5 lh-lg" style="font-size: 0.95rem; max-width: 600px;">
+                                            Technology evolves fast, but our planet shouldn't have to pay the price. We provide the tools, data, and 
+                                            certified networks needed to transform how your community handles aging electronics. 
+                                            From maximizing the lifespan of your current devices to ensuring retired tech is securely and responsibly recycled, 
+                                            we offer seamless solutions that turn the e-waste crisis into an opportunity for sustainable innovation.
+                                        </p>
+                                    
+                                        <div class="col-lg-12">
+                                            <div class="row row-cols-1 row-cols-md-2 g-4 accordion custom-accordion" id="dismantlingMetricsAccordion">
+                                                
+                                                <div class="col">
+                                                    <div class="accordion-item bg-transparent border-0 h-100">
+                                                        <h3 class="accordion-header">
+                                                            <button class="mt-3 accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0 bg-transparent text-dark fw-bold" 
+                                                                    type="button" data-bs-toggle="collapse" data-bs-target="#dismantleCollapseOne" aria-expanded="false" aria-controls="dismantleCollapseOne">
+                                                                <span>Active Phone Extension Rate</span>
+                                                            </button>
+                                                        </h3>
+                                                        <div id="dismantleCollapseOne" class="accordion-collapse collapse" data-bs-parent="#dismantlingMetricsAccordion">
+                                                            <div class="accordion-body px-4 py-2 bg-transparent small text-muted">
+                                                                Keeping devices in use longer is the first line of defense against e-waste. This metric tracks how successfully we help users prolong the lifespan of their smartphones through repairs, software updates, and trade-in programs, delaying the need for new manufacturing.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="accordion-item bg-transparent border-0 h-100">
+                                                        <h3 class="accordion-header">
+                                                            <button class="mt-3 accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0 bg-transparent text-dark fw-bold" 
+                                                                    type="button" data-bs-toggle="collapse" data-bs-target="#dismantleCollapseTwo" aria-expanded="false" aria-controls="dismantleCollapseTwo">
+                                                                <span>Total City-Wide Recyclables Diverted</span>
+                                                            </button>
+                                                        </h3>
+                                                        <div id="dismantleCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#dismantlingMetricsAccordion">
+                                                            <div class="accordion-body px-4 py-2 bg-transparent small text-muted">
+                                                                Every phone saved from the trash is a victory for the community. We measure the concrete volume of electronic waste successfully redirected away from local landfills and funneled into proper recovery channels, showcasing our collective impact on urban waste reduction.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="accordion-item bg-transparent border-0 h-100">
+                                                        <h3 class="accordion-header">
+                                                            <button class="mt-3 accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0 bg-transparent text-dark fw-bold" 
+                                                                    type="button" data-bs-toggle="collapse" data-bs-target="#dismantleCollapseThree" aria-expanded="false" aria-controls="dismantleCollapseThree">
+                                                                <span>Landfill Carbon Footprint Impact</span>
+                                                            </button>
+                                                        </h3>
+                                                        <div id="dismantleCollapseThree" class="accordion-collapse collapse" data-bs-parent="#dismantlingMetricsAccordion">
+                                                            <div class="accordion-body px-4 py-2 bg-transparent small text-muted">
+                                                                Discarded electronics don't just sit there—they contribute heavily to greenhouse gas emissions. This section quantifies the reduction in carbon emissions achieved by preventing old phones from rotting in landfills, translating your recycling efforts into measurable climate action.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="accordion-item bg-transparent border-0 h-100">
+                                                        <h3 class="accordion-header">
+                                                            <button class="mt-3 accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0 bg-transparent text-dark fw-bold" 
+                                                                    type="button" data-bs-toggle="collapse" data-bs-target="#dismantleCollapseFour" aria-expanded="false" aria-controls="dismantleCollapseFour">
+                                                                <span>Formal E-Waste Infrastructure</span>
+                                                            </button>
+                                                        </h3>
+                                                        <div id="dismantleCollapseFour" class="accordion-collapse collapse" data-bs-parent="#dismantlingMetricsAccordion">
+                                                            <div class="accordion-body px-4 py-2 bg-transparent small text-muted">
+                                                                Safe recycling requires specialized systems. We are building and supporting a certified, secure network of e-waste processors to ensure that hazardous materials are extracted safely and valuable rare-earth metals are responsibly recovered back into the tech lifecycle.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-5 text-center text-lg-end">
+                                        <img src="./img/service1/E-waste.png" alt="E-waste bin full of electronic components" class="img-fluid" style="max-height: 400px; width: auto;">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 2: Static Carousel Banner (No arrows) -->
+                        <section id="dismantlingHeroCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="position-relative w-100 d-flex align-items-center justify-content-center text-center text-white p-4" 
+                                        style="background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./img/service1/bg.png') no-repeat center center; background-size: cover; min-height: 400px;">
+                                        <div class="container" style="max-width: 800px;">
+                                            <p class="text-uppercase fw-semibold mb-2" style="letter-spacing: 3px; font-size: 0.9rem;">Novix</p>
+                                            <h1 class="display-4 fw-bold mb-4 text-uppercase" style="letter-spacing: 1px;">The Crisis of E-Waste</h1>
+                                            <p class="lead fs-5 opacity-75 mx-auto" style="max-width: 650px; line-height: 1.6;">
+                                                Millions of old smartphones are thrown away each year, piling up in landfills and releasing toxic chemicals into our environment.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 3: Process Roadmap -->
+                        <section class="py-5 bg-white">
+                            <div class="container text-center py-4">
+                                <p class="text-uppercase small fw-semibold tracking-wider" style="color: #7b8fcb; letter-spacing: 1px;">Our Platform Roadmap</p>
+                                <h2 class="display-6 fw-bold mb-5" style="color: #5c6fa9;">How It Works?<br>Step By Step</h2>
+                                
+                                <div class="row g-4 justify-content-center position-relative mt-5">
+                                    <div class="col-md-4 px-4 position-relative step-col">
+                                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4 border border-dashed text-primary fw-bold fs-2" 
+                                            style="width: 100px; height: 100px; border-style: dashed !important; border-color: #abb9e3 !important; color: #2b55b6 !important;">
+                                            1.
+                                        </div>
+                                        <h4 class="fw-bold mb-3" style="color: #5c6fa9; font-size: 1.25rem;">Safe Deactivation</h4>
+                                        <p class="text-secondary small px-lg-3" style="line-height: 1.6;">
+                                            The smartphone is turned off completely, and the lithium-ion battery is carefully removed first to prevent short circuits or fires during handling.
+                                        </p>
+                                    </div>
+
+                                    <div class="col-md-4 px-4 position-relative step-col">
+                                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4 border border-dashed text-primary fw-bold fs-2" 
+                                            style="width: 100px; height: 100px; border-style: dashed !important; border-color: #abb9e3 !important; color: #2b55b6 !important;">
+                                            2.
+                                        </div>
+                                        <h4 class="fw-bold mb-3" style="color: #5c6fa9; font-size: 1.25rem;">Components Sorting</h4>
+                                        <p class="text-secondary small px-lg-3" style="line-height: 1.6;">
+                                            Workers dismantle the phone casing to separate screens, circuit boards, plastics, and camera modules, grouping them cleanly by material type.
+                                        </p>
+                                    </div>
+
+                                    <div class="col-md-4 px-4 position-relative">
+                                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4 border border-dashed text-primary fw-bold fs-2" 
+                                            style="width: 100px; height: 100px; border-style: dashed !important; border-color: #abb9e3 !important; color: #2b55b6 !important;">
+                                            3.
+                                        </div>
+                                        <h4 class="fw-bold mb-3" style="color: #5c6fa9; font-size: 1.25rem;">Metals Recovery</h4>
+                                        <p class="text-secondary small px-lg-3" style="line-height: 1.6;">
+                                            The isolated circuit boards are sent for specialized processing to safely extract valuable raw materials like gold, copper, and silver.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 4: Power of Manual Dismantling Accordion -->
+                        <section class="position-relative overflow-hidden py-5 text-white rounded-4" 
+                                 style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./img/service1/bg2.png') no-repeat center center; background-size: cover; min-height: 400px;">
+                            <div class="container py-4">
+                                <div class="row g-5 align-items-center">
+                                    <div class="col-lg-5">
+                                        <h2 class="display-6 fw-bold mb-3 border-bottom border-secondary border-3 pb-3 d-inline-block text-capitalize" style="border-color: #7b8fcb !important;">
+                                            The Power of Manual Dismantling
+                                        </h2>
+                                        <p class="fs-5 opacity-75 mt-3" style="max-width: 450px; line-height: 1.6;">
+                                            Shifting from raw destruction to careful, hand-separated e-waste management protects both our resources and our planet.
+                                        </p>
+                                    </div>
+
+                                    <div class="col-lg-7">
+                                        <div class="accordion custom-accordion" id="dismantlingAccordionBottom">
+                                            
+                                            <div class="accordion-item bg-transparent border-0 mb-3">
+                                                <h3 class="accordion-header">
+                                                    <button class="accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0" 
+                                                            type="button" data-bs-toggle="collapse" data-bs-target="#dismantleBottomCollapseOne" aria-expanded="false" aria-controls="dismantleBottomCollapseOne">
+                                                        <span>How does manual dismantling stop toxic pollution?</span>
+                                                    </button>
+                                                </h3>
+                                                <div id="dismantleBottomCollapseOne" class="accordion-collapse collapse" data-bs-parent="#dismantlingAccordionBottom">
+                                                    <div class="accordion-body px-4 py-3 bg-dark-subtle text-black-50 small">
+                                                        Unlike large industrial shredders that smash devices and mix toxic chemicals blindly, manual dismantling isolates hazardous parts like batteries and mercury switches before any crushing happens. This keeps the surrounding soil and water completely clean.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item bg-transparent border-0 mb-3">
+                                                <h3 class="accordion-header">
+                                                    <button class="accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0" 
+                                                            type="button" data-bs-toggle="collapse" data-bs-target="#dismantleBottomCollapseTwo" aria-expanded="false" aria-controls="dismantleBottomCollapseTwo">
+                                                        <span>Why is hand-sorting better for recovering precious metals?</span>
+                                                    </button>
+                                                </h3>
+                                                <div id="dismantleBottomCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#dismantlingAccordionBottom">
+                                                    <div class="accordion-body px-4 py-3 bg-dark-subtle text-black-50 small">
+                                                        Technicians can visually identify and cleanly remove pure components like copper wiring, gold-plated connectors, and silver solders. This precision keeps the recovered metals highly pure and instantly ready for reuse in new technology.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item bg-transparent border-0 mb-3">
+                                                <h3 class="accordion-header">
+                                                    <button class="accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0" 
+                                                            type="button" data-bs-toggle="collapse" data-bs-target="#dismantleBottomCollapseThree" aria-expanded="false" aria-controls="dismantleBottomCollapseThree">
+                                                        <span>How does this process protect human health?</span>
+                                                    </button>
+                                                </h3>
+                                                <div id="dismantleBottomCollapseThree" class="accordion-collapse collapse" data-bs-parent="#dismantlingAccordionBottom">
+                                                    <div class="accordion-body px-4 py-3 bg-dark-subtle text-black-50 small">
+                                                        By dismantling devices carefully on specialized workbenches with proper ventilation, we completely eliminate the need to burn e-waste. This keeps dangerous heavy metal dust and toxic chemical fumes out of the air our communities breathe.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- PANEL: SHREDDING & RECOVERY (Service 3) -->
+                    <div class="tab-pane fade" id="shredding-panel" role="tabpanel" aria-labelledby="shredding-tab">
+                        
+                        <!-- Section 1: Overview & Metrics Accordion -->
+                        <section class="py-5 bg-white rounded-4 my-4">
+                            <div class="container px-4 px-md-5">
+                                <div class="row align-items-center g-5">
+                                    <div class="col-lg-7">
+                                        <h2 class="fw-bold mb-4 fs-3" style="color: #132A53;">See What We Have To Offer</h2>
+                                        <p class="text-secondary mb-5 lh-lg" style="font-size: 0.95rem; max-width: 600px;">
+                                            Yangon’s green future relies on modernizing how we handle technology. We offer an advanced blueprint for urban waste management, replacing outdated, manual scrap-sorting with high-efficiency automation. By integrating precision industrial shredding, magnetic separation, and mechanical material recovery, we provide the technology required to clean up our local environment, protect municipal landfills, and extract the hidden value inside every discarded smartphone.
+                                        </p>
+                                    
+                                        <div class="col-lg-12">
+                                            <div class="row row-cols-1 row-cols-md-2 g-4 accordion custom-accordion" id="shreddingAccordionTop">
+                                                
+                                                <div class="col">
+                                                    <div class="accordion-item bg-transparent border-0 h-100">
+                                                        <h3 class="accordion-header">
+                                                            <button class="mt-3 accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0 bg-transparent text-dark fw-bold" 
+                                                                    type="button" data-bs-toggle="collapse" data-bs-target="#shredCollapseOne" aria-expanded="false" aria-controls="shredCollapseOne">
+                                                                <span>Industrial Shredding Efficiency</span>
+                                                            </button>
+                                                        </h3>
+                                                        <div id="shredCollapseOne" class="accordion-collapse collapse" data-bs-parent="#shreddingAccordionTop">
+                                                            <div class="accordion-body px-4 py-2 bg-transparent small text-muted">
+                                                                Moving away from slow, manual disassembly, industrial shredders can process high volumes of electronics in seconds. This metric tracks the speed and volume capacity of our automated shredding systems, ensuring that thousands of discarded smartphones are quickly broken down into manageable pieces for downstream sorting.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="accordion-item bg-transparent border-0 h-100">
+                                                        <h3 class="accordion-header">
+                                                            <button class="mt-3 accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0 bg-transparent text-dark fw-bold" 
+                                                                    type="button" data-bs-toggle="collapse" data-bs-target="#shredCollapseTwo" aria-expanded="false" aria-controls="shredCollapseTwo">
+                                                                <span>Materials Recovered Mechanically</span>
+                                                            </button>
+                                                        </h3>
+                                                        <div id="shredCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#shreddingAccordionTop">
+                                                            <div class="accordion-body px-4 py-2 bg-transparent small text-muted">
+                                                                Instead of relying on manual scrap-sorting, automated machinery uses advanced physical sensors and shaking screens to automatically isolate different plastics, glass, and circuit board fragments. This metric measures the total volume of raw materials successfully captured by these machines, maximizing resource recovery.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="accordion-item bg-transparent border-0 h-100">
+                                                        <h3 class="accordion-header">
+                                                            <button class="mt-3 accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0 bg-transparent text-dark fw-bold" 
+                                                                    type="button" data-bs-toggle="collapse" data-bs-target="#shredCollapseThree" aria-expanded="false" aria-controls="shredCollapseThree">
+                                                                <span>Accuracy in Magnetic Sorting</span>
+                                                            </button>
+                                                        </h3>
+                                                        <div id="shredCollapseThree" class="accordion-collapse collapse" data-bs-parent="#shreddingAccordionTop">
+                                                            <div class="accordion-body px-4 py-2 bg-transparent small text-muted">
+                                                                Circuit boards and smartphone hardware contain a mix of ferrous (magnetic) and non-ferrous metals. By utilizing powerful magnetic separators and eddy current technology, our system isolates iron and steel with high precision, ensuring that valuable metals are cleanly separated without manual human error.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col">
+                                                    <div class="accordion-item bg-transparent border-0 h-100">
+                                                        <h3 class="accordion-header">
+                                                            <button class="mt-3 accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0 bg-transparent text-dark fw-bold" 
+                                                                    type="button" data-bs-toggle="collapse" data-bs-target="#shredCollapseFour" aria-expanded="false" aria-controls="shredCollapseFour">
+                                                                <span>Reduction in Landfill Waste</span>
+                                                            </button>
+                                                        </h3>
+                                                        <div id="shredCollapseFour" class="accordion-collapse collapse" data-bs-parent="#shreddingAccordionTop">
+                                                            <div class="accordion-body px-4 py-2 bg-transparent small text-muted">
+                                                                The ultimate goal of automation is keeping toxic e-waste out of local dump sites. This metric calculates the direct drop in total waste tonnage heading to Yangon's landfills, demonstrating how automated processing transforms potential environmental hazards into clean, reusable commodities.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-5 text-center text-lg-end">
+                                        <img src="./img/service1/E-waste.png" alt="E-waste bin full of electronic components" class="img-fluid" style="max-height: 400px; width: auto;">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 2: Static Carousel Banner (No arrows) -->
+                        <section id="shreddingHeroCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="position-relative w-100 d-flex align-items-center justify-content-center text-center text-white p-4" 
+                                        style="background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./img/service1/bg.png') no-repeat center center; background-size: cover; min-height: 400px;">
+                                        <div class="container" style="max-width: 800px;">
+                                            <p class="text-uppercase fw-semibold mb-2" style="letter-spacing: 3px; font-size: 0.9rem;">Novix</p>
+                                            <h1 class="display-4 fw-bold mb-4 text-uppercase" style="letter-spacing: 1px;">The Crisis of E-Waste</h1>
+                                            <p class="lead fs-5 opacity-75 mx-auto" style="max-width: 650px; line-height: 1.6;">
+                                                Millions of old smartphones are thrown away each year, piling up in landfills and releasing toxic chemicals into our environment.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 3: Process Roadmap -->
+                        <section class="py-5 bg-white">
+                            <div class="container text-center py-4">
+                                <p class="text-uppercase small fw-semibold tracking-wider" style="color: #7b8fcb; letter-spacing: 1px;">Our Platform Roadmap</p>
+                                <h2 class="display-6 fw-bold mb-5" style="color: #5c6fa9;">How It Works?<br>Step By Step</h2>
+                                
+                                <div class="row g-4 justify-content-center position-relative mt-5">
+                                    <div class="col-md-4 px-4 position-relative step-col">
+                                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4 border border-dashed text-primary fw-bold fs-2" 
+                                            style="width: 100px; height: 100px; border-style: dashed !important; border-color: #abb9e3 !important; color: #2b55b6 !important;">
+                                            1.
+                                        </div>
+                                        <h4 class="fw-bold mb-3" style="color: #5c6fa9; font-size: 1.25rem;">Mechanical Shredding</h4>
+                                        <p class="text-secondary small px-lg-3" style="line-height: 1.6;">
+                                            Stripped smartphone chassis are fed into heavy industrial shredders that use high-torque rotating blades to crush the tech into uniform, coin-sized pieces.
+                                        </p>
+                                    </div>
+
+                                    <div class="col-md-4 px-4 position-relative step-col">
+                                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4 border border-dashed text-primary fw-bold fs-2" 
+                                            style="width: 100px; height: 100px; border-style: dashed !important; border-color: #abb9e3 !important; color: #2b55b6 !important;">
+                                            2.
+                                        </div>
+                                        <h4 class="fw-bold mb-3" style="color: #5c6fa9; font-size: 1.25rem;">Magnetic Separation</h4>
+                                        <p class="text-secondary small px-lg-3" style="line-height: 1.6;">
+                                            The shredded mixed streams pass under powerful overhead magnets and eddy-current separators to instantly isolate iron, steel, and aluminum from plastics.
+                                        </p>
+                                    </div>
+
+                                    <div class="col-md-4 px-4 position-relative">
+                                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4 border border-dashed text-primary fw-bold fs-2" 
+                                            style="width: 100px; height: 100px; border-style: dashed !important; border-color: #abb9e3 !important; color: #2b55b6 !important;">
+                                            3.
+                                        </div>
+                                        <h4 class="fw-bold mb-3" style="color: #5c6fa9; font-size: 1.25rem;">Advanced Recovery</h4>
+                                        <p class="text-secondary small px-lg-3" style="line-height: 1.6;">
+                                            The remaining circuit board fragments undergo automated air classification and optical sorting to group high-value gold and copper particles together.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Section 4: Power of Shredding & Recovery Accordion -->
+                        <section class="position-relative overflow-hidden py-5 text-white rounded-4" 
+                                 style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./img/service1/bg2.png') no-repeat center center; background-size: cover; min-height: 400px;">
+                            <div class="container py-4">
+                                <div class="row g-5 align-items-center">
+                                    <div class="col-lg-5">
+                                        <h2 class="display-6 fw-bold mb-3 border-bottom border-secondary border-3 pb-3 d-inline-block text-capitalize" style="border-color: #7b8fcb !important;">
+                                            The Power of Shredding & Recovery
+                                        </h2>
+                                        <p class="fs-5 opacity-75 mt-3" style="max-width: 450px; line-height: 1.6;">
+                                            When smartphones end up in landfills or open burn pits, they don't just sit there—they poison our surroundings.
+                                        </p>
+                                    </div>
+
+                                    <div class="col-lg-7">
+                                        <div class="accordion custom-accordion" id="shreddingAccordionBottom">
+                                            
+                                            <div class="accordion-item bg-transparent border-0 mb-3">
+                                                <h3 class="accordion-header">
+                                                    <button class="accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0" 
+                                                            type="button" data-bs-toggle="collapse" data-bs-target="#shredBottomCollapseOne" aria-expanded="false" aria-controls="shredBottomCollapseOne">
+                                                        <span>Why do we use industrial shredding instead of doing it all by hand?</span>
+                                                    </button>
+                                                </h3>
+                                                <div id="shredBottomCollapseOne" class="accordion-collapse collapse" data-bs-parent="#shreddingAccordionBottom">
+                                                    <div class="accordion-body px-4 py-3 bg-dark-subtle text-black-50 small">
+                                                        Manual dismantling is great for removing dangerous parts, but it is too slow for millions of tons of waste. Large-scale industrial shredders can process thousands of devices every hour, making global tech recycling fast and highly efficient.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item bg-transparent border-0 mb-3">
+                                                <h3 class="accordion-header">
+                                                    <button class="accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0" 
+                                                            type="button" data-bs-toggle="collapse" data-bs-target="#shredBottomCollapseTwo" aria-expanded="false" aria-controls="shredBottomCollapseTwo">
+                                                        <span>How does e-waste sorting technology work?</span>
+                                                    </button>
+                                                </h3>
+                                                <div id="shredBottomCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#shreddingAccordionBottom">
+                                                    <div class="accordion-body px-4 py-3 bg-dark-subtle text-black-50 small">
+                                                        The platform uses advanced sorting tech like "air classifiers" that blow air through the shredded mix. Heavy metals drop straight down, while lighter materials like plastics fly into separate bins automatically.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item bg-transparent border-0 mb-3">
+                                                <h3 class="accordion-header">
+                                                    <button class="accordion-button collapsed px-4 py-3 d-flex justify-content-between align-items-center w-100 border-0" 
+                                                            type="button" data-bs-toggle="collapse" data-bs-target="#shredBottomCollapseThree" aria-expanded="false" aria-controls="shredBottomCollapseThree">
+                                                        <span>What happens to the materials after they are recovered?</span>
+                                                    </button>
+                                                </h3>
+                                                <div id="shredBottomCollapseThree" class="accordion-collapse collapse" data-bs-parent="#shreddingAccordionBottom">
+                                                    <div class="accordion-body px-4 py-3 bg-dark-subtle text-black-50 small">
+                                                        Once sorted into pure piles of plastic, copper, aluminum, and gold dust, these materials are sent to manufacturing plants. They are melted down and used to build brand-new eco-friendly electronics without mining new resources.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Get In Touch Section -->
+        <section class="py-5" style="background-color: #ffffff;">
+            <div class="container py-md-5">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-7 p-4 p-sm-5 text-white" style="background-color: #1a2e5a; min-height: 500px; border-radius: 4px 0 0 4px;">
+                        <div class="pe-md-5 my-auto">
+                            <h6 class="text-uppercase fw-semibold tracking-wide mb-3" style="color: #a3b8cc; letter-spacing: 1px;">Welcome</h6>
+                            <h2 class="display-5 fw-bold mb-4" style="line-height: 1.2;">Get in Touch <br> with Novix</h2>
+                            <p class="opacity-75 fs-6" style="max-width: 480px; line-height: 1.7;">
+                                Have questions about smartphone recycling? Want to bring our interactive sustainability platform to your school or local community? Send us a message and our team will get back to you within 24 hours.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5 position-relative mt-n4 mt-md-0" style="z-index: 2;">
+                        <div class="p-4 p-sm-5" style="background-color: #7a8ebf; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); margin-left: -5%; margin-right: 5%;">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <label class="form-label text-uppercase fw-bold text-white small mb-1" style="font-size: 0.75rem; letter-spacing: 0.5px;">Full Name</label>
+                                        <input type="text" class="form-control border-0 rounded-0 bg-light" style="height: 42px;">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-label text-uppercase fw-bold text-white small mb-1" style="font-size: 0.75rem; letter-spacing: 0.5px;">Email Address</label>
+                                        <input type="text" class="form-control border-0 rounded-0 bg-light" style="height: 42px;">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-label text-uppercase fw-bold text-white small mb-1" style="font-size: 0.75rem; letter-spacing: 0.5px;">Organization</label>
+                                        <input type="email" class="form-control border-0 rounded-0 bg-light" style="height: 42px;">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form-label text-uppercase fw-bold text-white small mb-1" style="font-size: 0.75rem; letter-spacing: 0.5px;">Reason for Inquiry</label>
+                                        <select class="form-select border-0 rounded-0 bg-light text-muted" style="height: 42px;">
+                                            <option selected disabled hidden></option>
+                                            <option value="1">General Inquiry</option>
+                                            <option value="2">Request Educational Platform for School/Community</option>
+                                            <option value="3">Smartphone Recycling & Drop-off Questions</option>
+                                            <option value="4">Partnership / Organization Collaboration</option>
+                                            <option value="5">Media / Press Inquiry</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label text-uppercase fw-bold text-white small mb-1" style="font-size: 0.75rem; letter-spacing: 0.5px;">Type your message here</label>
+                                        <textarea class="form-control border-0 rounded-0 bg-light" rows="5"></textarea>
+                                    </div>
+                                    <div class="col-12 text-end mt-4">
+                                        <button type="submit" class="btn text-white px-4 py-2 fw-semibold rounded-0" style="background-color: #1a2e5a; min-width: 120px;">Send</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+<footer class="footer-top">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="./img/LOGO_NOVIX-removebg-preview.png" alt="Xtra Logo" width="80" height="80">
+                    </div>
+                    <p class="mb-4" style="font-size: 14px; opacity: 0.9; font-weight: 300; line-height: 1.6;">
+                        Building a sustainable tech community together. Join us in reducing global e-waste and advancing the circular economy one device at a time.
+                    </p>
+                    <button class="btn rounded-pill text-white fw-semibold px-4 py-2" style="background-color: #7b8ebf; border: none;">
+                        Subscribe
+                    </button>
+                </div>
+
+                <div class="col-md-5">
+                    <h5>Shortcuts</h5>
+                    <div class="title-line"></div>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="footer-links">
+                                <li><a href="./index.html">> Home</a></li>
+                                <li><a href="./about.html">> About</a></li>
+
+                                <li class="nav-item">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#authModal">
+                                        > Account
+                                    </a>
+                                </li>
+                                <li><a href="./faq.html">> FAQ</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="col-6">
+                            <ul class="footer-links">
+                                <li><a href="./services.html">> Services</a></li>
+
+                                <li><a href="https://edusn-my.sharepoint.com/:w:/g/personal/heinthutatun_edusnschool_co_uk/IQBeHDI7t2h9SYRksYMqFL5SAX8HwHRovbh1-XD6wlonCrI">> References</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <h5>Contact</h5>
+                    <div class="title-line"></div>
+                    <!-- Added icons and aligned elements nicely using Bootstrap's flex utilities -->
+                    <div class="contact-info d-flex align-items-center mb-2">
+                        <i class="bi bi-twitter-x me-2"></i> @Novix_E-Waste_TTe
+                    </div>
+                    <div class="contact-info d-flex align-items-center mb-2">
+                        <i class="bi bi-facebook me-2"></i> @Novix_E-Waste_TT_FB
+                    </div>
+                    <div class="contact-info d-flex align-items-center mb-2">
+                        <i class="bi bi-discord me-2"></i> @Novix_E-Waste_TT_DC
+                    </div>
+                    <div class="contact-info d-flex align-items-center mb-2">
+                        <i class="bi bi-instagram me-2"></i> @Novix_E-Waste_TT_IG
+                    </div>
+                    <div class="contact-info d-flex align-items-center mb-2">
+                        <i class="bi bi-envelope-fill me-2"></i> novixewaste@gmail.com
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    Copyright @ 2026 Name. All Rights Reserved
+                </div>
+                <div class="col-md-6 text-end">
+                    Privacy Policy | Contact Us
+                    <a href="" class="blue-icon" data-bs-toggle="modal" data-bs-target="#customerModal"><i class="bi bi-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Support Modal -->
+    <div class="modal fade modal-bottom-right" id="customerModal" tabindex="-1" aria-labelledby="customerLabel" aria-hidden="true">
+        <div class="modal-dialog mb-5">
+            <div class="modal-content bg-white text-dark p-3 shadow-lg">
+                <div class="modal-header border-0">
+                    <ul class="nav nav-pills" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <h5>Customer Support</h5>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body d-flex flex-column" style="min-height: 300px;">
+                    <div class="flex-grow-1">
+                        <p class="text-muted small">How can we help you today?</p>
+                    </div>
+
+                    <div class="mt-auto pt-3 border-top">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Type your message here..." aria-label="Recipient's username" aria-describedby="button-send">
+                            <button class="btn btn-primary" type="button" id="button-send">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
